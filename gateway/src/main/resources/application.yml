@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: "server-gateway"
+
+zuul:
+  ignored-services: "*"
+  routes:
+    checkout-service:
+      path: "/checkout-service/**"
+      service-id: "checkout-service"
+    email-service:
+      path: "/email-service/**"
+      service-id: "email-service"
+    information-service:
+      path: "/information-service/**"
+      service-id: "information-service"
+    product-service:
+      path: "/product-service/**"
+      service-id: "product-service"
+    common-service:
+      path: "/common-service/**"
+      service-id: "common-service"

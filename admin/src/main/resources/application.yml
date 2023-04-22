@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: "admin-service"
+
+  thymeleaf:
+    cache: false
+    enabled: true
+    mode: HTML
+  devtools:
+    restart:
+      enabled: true
+  data:
+    rest:
+      base-path: ""
+
+server:
+  port: 7000
